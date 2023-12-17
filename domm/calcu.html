@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate</title>
+  <style>
+    body{
+      font-family: Garamond;
+    }
+    .styl{
+      font-size: 20px;
+      padding: 10px;
+    }
+    .butter{
+      font-size: 20px;
+      border:none;
+      background-color: rgb(33, 209, 24);
+      font-weight: bold;
+      padding: 10px;
+      cursor:pointer;
+
+    }
+  </style>
+</head>
+<body>
+    <p>Amazone shipping calculator</p>
+    <p>Order under $40 = +$10 shipping</p>
+    <p>Order ubove $50 = free shipping</p>
+    <input placeholder="Enter your text here" class = "butt styl">
+    <button class="butter" onclick="
+        cals();
+        ">calculate</button>
+        <p class = "cls"></p>
+</body>
+  <script>
+    function cals(){
+        const qb = document.querySelector('.butt');
+          let val = Number(qb.value)
+          if(val<40){
+            val = val + 10;
+          }
+          document.querySelector('.cls').innerHTML=`$${val}`;
+
+    }
+  </script>
+</html>
